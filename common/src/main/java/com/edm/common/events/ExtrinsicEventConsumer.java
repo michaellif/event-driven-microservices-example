@@ -2,7 +2,6 @@ package com.edm.common.events;
 
 import java.util.Arrays;
 import java.util.Properties;
-import java.util.UUID;
 import java.util.logging.Logger;
 
 import javax.annotation.PostConstruct;
@@ -44,7 +43,7 @@ public class ExtrinsicEventConsumer implements Runnable {
 
 	@PostConstruct
 	private void init() {
-		kafkaProperties.put("group.id", kafkaIntrinsicTopic + "-" + UUID.randomUUID());
+		kafkaProperties.put("group.id", kafkaIntrinsicTopic + "-handler");
 		consumer = new KafkaConsumer<>(kafkaProperties, new StringDeserializer(), new EventDeserializer());
 	}
 
