@@ -19,7 +19,7 @@ Add lines
 >      127.0.0.1       kafka_broker_3
 to /etc/hosts
 
-> cd .../microservices-course
+> cd .../event-driven-microservices-example
 > docker-compose up -d
 
 ### Verify:
