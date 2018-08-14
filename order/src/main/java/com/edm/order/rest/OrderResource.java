@@ -32,7 +32,7 @@ public class OrderResource {
 	private OrderCommandService commandService;
 
 	@GET
-	@Path("/{customerId}/order/list")
+	@Path("/{customerId}/order")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Order> getAllOrders() {
 		return queryService.getAllOrders();

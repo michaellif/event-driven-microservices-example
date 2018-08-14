@@ -32,7 +32,6 @@ public class CustomerResource {
 	private CustomerCommandService commandService;
 
 	@GET
-	@Path("/list")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Customer> getAllCustomers() {
 		return queryService.getAllCustomers();
